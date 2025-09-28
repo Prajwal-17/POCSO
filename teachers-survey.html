@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shield360 Teacher Survey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                  url("back1.jpg") no-repeat center/cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .survey-container {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 30px;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    h1 {
+      font-family: "Merriweather", serif;
+      font-size: 28px;
+      margin-bottom: 8px;
+      text-align: center;
+      color: #f9f9f9;
+    }
+    p.intro {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #dbeafe;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 18px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+    .question:hover { transform: translateY(-3px); }
+    .question label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .question input[type="text"], textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 8px;
+      font-family: inherit;
+    }
+    .options { margin-top: 10px; }
+    .options label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="survey-container">
+    <h1>Shield360 Teacher Survey</h1>
+    <p class="intro">Help us strengthen POCSO awareness and child safety practices in schools.</p>
+
+    <form id="surveyForm">
+      
+      <!-- Awareness -->
+      <div class="question">
+        <label>1. How familiar are you with the POCSO Act?</label>
+        <div class="options">
+          <label><input type="radio" name="q1" value="Very familiar"> Very familiar</label>
+          <label><input type="radio" name="q1" value="Somewhat familiar"> Somewhat familiar</label>
+          <label><input type="radio" name="q1" value="Heard of it"> Heard of it</label>
+          <label><input type="radio" name="q1" value="Not familiar"> Not familiar</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>2. What signs of abuse should teachers look for?</label>
+        <textarea name="q2" rows="3" placeholder="Write your response..."></textarea>
+      </div>
+
+      <!-- Role -->
+      <div class="question">
+        <label>3. In case a child reports abuse, what should be your FIRST action?</label>
+        <div class="options">
+          <label><input type="radio" name="q3" value="Comfort and listen"> Comfort and listen to the child</label>
+          <label><input type="radio" name="q3" value="Ignore until confirmed"> Ignore until confirmed</label>
+          <label><input type="radio" name="q3" value="Inform police/childline"> Report to authorities immediately</label>
+          <label><input type="radio" name="q3" value="Tell classmates"> Share openly with others</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <label>4. What responsibilities do teachers have under POCSO?</label>
+        <textarea name="q4" rows="3"></textarea>
+      </div>
+
+      <!-- Scenario -->
+      <div class="question">
+        <label>5. Scenario: A child avoids classes and appears withdrawn. What is your next step?</label>
+        <div class="options">
+          <label><input type="radio" name="q5" value="Talk privately"> Talk privately to the child</label>
+          <label><input type="radio" name="q5" value="Call parents immediately"> Call parents immediately</label>
+          <label><input type="radio" name="q5" value="Ignore"> Wait and see</label>
+        </div>
+      </div>
+
+      <!-- Training & Feedback -->
+      <div class="question">
+        <label>6. How confident are you in identifying abuse cases? (1=Low, 5=High)</label>
+        <select name="q6">
+          <option value="">Select</option>
+          <option value="1">1 - Not confident</option>
+          <option value="2">2</option>
+          <option value="3">3 - Neutral</option>
+          <option value="4">4</option>
+          <option value="5">5 - Very confident</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label>7. What training/support would help you handle child safety better?</label>
+        <textarea name="q7" rows="3"></textarea>
+      </div>
+
+      <div class="question">
+        <label>8. Any additional suggestions or comments?</label>
+        <textarea name="q8" rows="3"></textarea>
+      </div>
+
+      <button type="submit">Submit Survey</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("surveyForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for completing the survey! Your response has been recorded.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

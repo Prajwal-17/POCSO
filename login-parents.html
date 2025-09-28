@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parent Login - POCSO Awareness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #1c1c1e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 900px;
+      height: 550px;
+      display: flex;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .left {
+      width: 45%;
+      background-color: #121212;
+      padding: 60px 40px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .left p {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background-color: #2a2a2c;
+      color: rgb(22, 17, 17);
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border: 1px solid #f5bcf7;
+    }
+
+    .captcha-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .captcha-code {
+      background: #2a2a2c;
+      color: #fffbfb;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: 600;
+      letter-spacing: 4px;
+    }
+
+    .forgot {
+      text-align: right;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    .forgot a {
+      color: #f0b9ea;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #eeb3f2;
+      border: none;
+      color: rgb(34, 5, 5);
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #f6c1fe;
+    }
+
+    .signup {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #aaa;
+      text-align: center;
+    }
+
+    .signup a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .right {
+      width: 55%;
+      background: linear-gradient(rgba(245, 187, 236, 0.8), rgba(222, 137, 230, 0.8)),
+                  url('parents.jpeg') center center/cover no-repeat;
+      color: rgb(24, 16, 16);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      position: relative;
+    }
+
+    .right h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .right p {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .quote {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      font-size: 14px;
+      font-style: italic;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+      }
+
+      .left, .right {
+        width: 100%;
+        padding: 40px;
+      }
+
+      .right {
+        height: 300px;
+      }
+
+      .quote {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <h2>Login</h2>
+      <p>Enter your account details</p>
+
+      <form>
+        <div class="form-group">
+          <label for="username">Personal Email</label>
+          <input type="email" id="username" placeholder="" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required />
+        </div>
+
+        <div class="form-group captcha-box">
+          <span class="captcha-code">7XLM2</span>
+          <input type="text" placeholder="Enter Captcha" required />
+        </div>
+
+        <div class="forgot">
+          <a href="#">Forgot Password?</a>
+        </div>
+
+<a href="parent.html" class="btn">Login</a>
+      </form>
+
+      <div class="signup">
+        Don’t have an account? <a href="#">Sign up</a>
+      </div>
+    </div>
+
+    <div class="right">
+      <h1>Welcome to Parent Portal</h1>
+      <p>Login to access your account</p>
+
+      <div class="quote">
+        “Your children will become what you are; so be what you want them to be.”
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

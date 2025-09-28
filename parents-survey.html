@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shield 360 – Parent Survey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('pati.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(4px);
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 50px auto;
+      background: rgba(122, 120, 122, 0.85);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      text-align: center;
+      color: #e19fdf;
+      margin-bottom: 15px;
+    }
+
+    .instructions {
+      background-color: #fff9c4;
+      border-left: 5px solid #ffc107;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .question-block {
+      margin-bottom: 25px;
+    }
+
+    .question {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .options label {
+      display: block;
+      background: #f1f1f1;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .options label:hover {
+      background-color: #d1ecf1;
+    }
+
+    .options input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #dea2e4;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #ea99dd;
+    }
+
+    .thank-you {
+      display: none;
+      text-align: center;
+      font-size: 1.3rem;
+      color: #2e7d32;
+      margin-top: 30px;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Shield 360 Parent Survey</h1>
+    <p class="instructions">
+      Kindly fill out the survey below to help us understand your awareness about child safety and the POCSO Act.
+      All responses are confidential.
+    </p>
+
+    <form id="quizForm">
+      <div class="question-block">
+        <div class="question">1. Have you heard about the POCSO Act?</div>
+        <div class="options">
+          <label><input type="radio" name="q1" value="Yes" required />Yes</label>
+          <label><input type="radio" name="q1" value="No" />No</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">2. Do you talk to your child about personal safety?</div>
+        <div class="options">
+          <label><input type="radio" name="q2" value="Yes" required />Yes</label>
+          <label><input type="radio" name="q2" value="No" />No</label>
+          <label><input type="radio" name="q2" value="Sometimes" />Sometimes</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">3. Do you think your child feels safe at school?</div>
+        <div class="options">
+          <label><input type="radio" name="q3" value="Yes" required />Yes</label>
+          <label><input type="radio" name="q3" value="No" />No</label>
+          <label><input type="radio" name="q3" value="Not sure" />Not sure</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">4. Does your child know they can say “NO” to something uncomfortable?</div>
+        <div class="options">
+          <label><input type="radio" name="q4" value="Yes" required />Yes</label>
+          <label><input type="radio" name="q4" value="No" />No</label>
+          <label><input type="radio" name="q4" value="Not sure" />Not sure</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">5. Do you monitor your child’s online activity?</div>
+        <div class="options">
+          <label><input type="radio" name="q5" value="Yes" required />Yes</label>
+          <label><input type="radio" name="q5" value="No" />No</label>
+          <label><input type="radio" name="q5" value="Sometimes" />Sometimes</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">6. Has your child’s school conducted sessions on POCSO or safety?</div>
+        <div class="options">
+          <label><input type="radio" name="q6" value="Yes" required />Yes</label>
+          <label><input type="radio" name="q6" value="No" />No</label>
+          <label><input type="radio" name="q6" value="Not sure" />Not sure</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">7. Would your child feel safe reporting something to you?</div>
+        <div class="options">
+          <label><input type="radio" name="q7" value="Yes" required />Yes</label>
+          <label><input type="radio" name="q7" value="No" />No</label>
+          <label><input type="radio" name="q7" value="Not sure" />Not sure</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">8. Would you attend a workshop on child safety?</div>
+        <div class="options">
+          <label><input type="radio" name="q8" value="Yes" required />Yes</label>
+          <label><input type="radio" name="q8" value="No" />No</label>
+          <label><input type="radio" name="q8" value="Maybe" />Maybe</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">9. What is your biggest concern about your child’s safety?</div>
+        <div class="options">
+          <label><input type="radio" name="q9" value="Online threats" required />Online threats</label>
+          <label><input type="radio" name="q9" value="School environment" />School environment</label>
+          <label><input type="radio" name="q9" value="Public spaces" />Public spaces</label>
+          <label><input type="radio" name="q9" value="Peer pressure" />Peer pressure</label>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question">10. What support would you like from Shield 360?</div>
+        <div class="options">
+          <label><input type="radio" name="q10" value="Workshops" required />Workshops</label>
+          <label><input type="radio" name="q10" value="Booklets" />Booklets</label>
+          <label><input type="radio" name="q10" value="Videos" />Videos</label>
+          <label><input type="radio" name="q10" value="Counseling help" />Counseling help</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Survey</button>
+
+      <div class="thank-you" id="thankYouMessage">
+        ✅ Thank you for completing the survey!<br />Your response has been recorded.
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('quizForm');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Optional: You can collect answers here if needed
+      // const formData = new FormData(form);
+      // for (const [name, value] of formData.entries()) {
+      //   console.log(name, value);
+      // }
+
+      form.style.display = 'none';  // Hide the form on submit
+      thankYou.style.display = 'block'; // Show thank you message
+    });
+  </script>
+</body>
+</html>

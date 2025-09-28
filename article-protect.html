@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listen. Act. Protect - Shield360</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* Navbar */
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo { font-size: 22px; font-weight: bold; color: #e63946; }
+    nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+    nav ul li a.active { color: #e63946; border-bottom: 2px solid #e63946; padding-bottom: 3px; }
+
+    /* Hero Banner */
+    .hero {
+      position: relative;
+      background: url("read.jpg") no-repeat center center/cover;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 38px;
+      z-index: 1;
+      text-align: center;
+      max-width: 750px;
+    }
+
+    /* Article Content */
+    .article-container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .article-container h2 {
+      margin-top: 30px;
+      color: #e63946;
+    }
+    .highlight {
+      background: #fff0f0;
+      border-left: 5px solid #e63946;
+      padding: 12px 18px;
+      margin: 20px 0;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    .quote {
+      font-size: 20px;
+      font-weight: 600;
+      color: #555;
+      margin: 30px 0;
+      border-left: 4px solid #e63946;
+      padding-left: 15px;
+    }
+    .article-container img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 25px 0;
+    }
+
+    /* Steps */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .step {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .step i {
+      font-size: 40px;
+      color: #e63946;
+      margin-bottom: 10px;
+    }
+    .step h3 { margin-bottom: 12px; }
+
+    /* Social Share */
+    .share-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .share-section h3 { margin-bottom: 15px; }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 12px;
+      font-size: 22px;
+      color: #e63946;
+      transition: transform 0.3s ease;
+    }
+    .social-icons a:hover { transform: scale(1.2); }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Shield360</div>
+    <ul id="menu">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="login.html" class="btn-donate">LOGIN</a>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Listen. Act. Protect – Understanding POCSO and Building Safer Futures</h1>
+  </section>
+
+  <!-- Article -->
+  <section class="article-container">
+    <p>The **Protection of Children from Sexual Offences (POCSO) Act, 2012** is a comprehensive law enacted in India to safeguard children from sexual assault, harassment, and pornography. It is one of the strongest legal frameworks in the world to protect children from abuse.</p>
+
+    <div class="highlight">
+      Every child under 18 is covered under POCSO. The law ensures **child-friendly reporting, investigation, and trial procedures** so survivors are not re-traumatized.
+    </div>
+
+    <h2>Why Listen?</h2>
+    <p>Children often give **signals** when they feel unsafe. Listening carefully means noticing changes in behavior, emotions, or fears. A child who feels heard is more likely to come forward and seek help.</p>
+    <img src="use.jpeg" alt="Child being listened to">
+
+    <h2>How to Act?</h2>
+    <p>Taking action is crucial. Under POCSO, **every individual is legally bound to report cases** of child sexual abuse. Failure to do so can lead to penalties. Parents, teachers, and citizens must not ignore warning signs.</p>
+
+    <!-- Steps -->
+    <div class="steps">
+      <div class="step">
+        <i class="fas fa-phone-alt"></i>
+        <h3>Step 1: Report Immediately</h3>
+        <p>Call **1098 (CHILDLINE)** or file a complaint with the nearest police station. POCSO makes reporting mandatory and protects the identity of the child.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-balance-scale"></i>
+        <h3>Step 2: Legal Protection</h3>
+        <p>The child’s statement must be recorded in a **safe and friendly environment**, preferably by a female officer. The Act ensures quick trials through Special Courts.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>Step 3: Emotional Support</h3>
+        <p>Children need **counseling, therapy, and reassurance**. NGOs and Child Welfare Committees provide psychological support throughout the process.</p>
+      </div>
+    </div>
+
+    <h2>Why Protect?</h2>
+    <p>Protecting means creating a world where children feel safe — at home, in school, and online. POCSO empowers society to act collectively against abuse and ensures **zero tolerance** towards exploitation.</p>
+
+    <div class="quote">
+      "Listening with empathy, acting with courage, and protecting with determination is the true spirit of POCSO."
+    </div>
+
+    <h2>Helplines & Resources</h2>
+    <ul>
+      <li><strong>CHILDLINE 1098</strong> – 24/7 emergency helpline for children in distress.</li>
+      <li><strong>National Commission for Protection of Child Rights (NCPCR)</strong> – <a href="https://ncpcr.gov.in" target="_blank">ncpcr.gov.in</a></li>
+      <li><strong>POCSO e-Box</strong> – Online tool to report child abuse: <a href="https://pocsoebox.gov.in" target="_blank">pocsoebox.gov.in</a></li>
+    </ul>
+
+    <!-- Social Share -->
+    <div class="share-section">
+      <h3>Spread Awareness</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shield360. All rights reserved.</p>
+    <div>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms & Conditions</a> | 
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </footer>
+
+</body>
+</html>

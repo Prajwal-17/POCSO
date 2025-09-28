@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shield 360 - A POCSO Awareness and Child Safety Initiative</title>
+    
+    <style>
+        body {
+            background-color: #E6E6FA; /* Lavender color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Top Navigation/Utility Bar */
+        .top-bar {
+            background-color: #f8f8f8;
+            padding: 5px 20px;
+            font-size: 0.9em;
+            text-align: right;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+        .top-bar a {
+            color: #666;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .top-bar a:hover {
+            color: #4B0082;
+        }
+
+        /* Main Header with Image Background and Overlay */
+        header {
+            text-align: center;
+            padding: 40px 20px 80px 20px;
+            color: #fff;
+            position: relative;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrNdPOfMroP2dHUA3DLBUaV_AUGwEoKB2pRQ&s');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(75, 0, 130, 0.5);
+            z-index: 1;
+        }
+        header h1, header h2 {
+            color: #fff;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin: 0 0 10px 0;
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 5px;
+        }
+        header h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+        }
+
+        /* Call to Action buttons */
+        .header-cta {
+            position: relative;
+            z-index: 2;
+            margin-top: 30px;
+        }
+        .header-cta a {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .cta-primary {
+            background-color: #6A5ACD; /* Slate Blue */
+            color: #fff;
+            border: 2px solid #6A5ACD;
+        }
+        .cta-primary:hover {
+            background-color: #483D8B; /* Darker Slate Blue */
+            transform: translateY(-2px);
+        }
+        .cta-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .cta-secondary:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Container */
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Introduction Section */
+        .introduction-hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+        .introduction-hero h3 {
+            font-size: 2.2em;
+            color: #4B0082;
+            margin-bottom: 15px;
+        }
+        .introduction-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Video Section */
+        .video-container {
+            max-width: 800px;
+            margin: 20px auto 40px auto;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* General Section Styling */
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h3 {
+            color: #4B0082;
+            font-size: 1.8em;
+            border-bottom: 2px solid #6A5ACD;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Side-by-Side Content Boxes */
+        .content-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .info-box {
+            flex: 1 1 calc(33% - 25px);
+            min-width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #f0f8ff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .info-box h3 {
+            color: #4B0082;
+            font-size: 1.3em;
+            border-bottom: 1px solid #6A5ACD;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .info-box strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            color: #6A5ACD;
+        }
+        .info-box p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Core Pillars Section */
+        .core-pillars .pillar-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .core-pillars .pillar-item {
+            flex: 1 1 calc(48% - 20px);
+            min-width: 300px;
+            padding: 20px;
+            background-color: #e0e9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            transition: background-color 0.3s ease;
+        }
+        .core-pillars .pillar-item:hover {
+            background-color: #d1e0f7;
+        }
+        .core-pillars .pillar-item strong {
+            color: #4B0082;
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .core-pillars .pillar-item p {
+            color: #555;
+        }
+
+        /* Get Involved Section */
+        .get-involved {
+            background-color: #FFFAF0;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .get-involved h3 {
+            color: #6A5ACD;
+            border-bottom: none;
+            margin-bottom: 20px;
+        }
+        .get-involved ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+            text-align: left;
+        }
+        .get-involved li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+            color: #555;
+        }
+        .get-involved li::before {
+            content: '👉';
+            position: absolute;
+            left: 0;
+            color: #6A5ACD;
+            font-size: 1.2em;
+        }
+
+        /* Footer and new button styling */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background-color: #333;
+            color: #eee;
+            font-size: 0.9em;
+        }
+        .survey-button {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 20px;
+            background-color: #8A2BE2; /* A shade of purple */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .survey-button:hover {
+            background-color: #6A0DAD; /* Darker purple on hover */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header h2 {
+                font-size: 1.2em;
+            }
+            .header-cta a {
+                padding: 10px 20px;
+                margin: 0 5px;
+            }
+            .introduction-hero h3 {
+                font-size: 1.8em;
+            }
+            .introduction-hero p {
+                font-size: 1em;
+            }
+            .content-boxes {
+                flex-direction: column;
+            }
+            .info-box {
+                flex: 1 1 100%;
+            }
+            .core-pillars .pillar-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <a href="#">Contact</a>
+        <a href="#">Support</a>
+        <a href="#">Donate</a>
+    </div>
+
+    <header>
+        <h1>Shield 360</h1>
+        <h2>A POCSO Awareness and Child Safety Initiative</h2>
+        <div class="header-cta">
+            <a href="#how-educators-can-help" class="cta-primary">Learn More</a>
+            <a href="#get-involved-section" class="cta-secondary">Get Involved</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="introduction-hero">
+            <h3>Empowering a Safer Future for Every Child</h3>
+            <p><strong>Shield 360</strong> is a program dedicated to creating awareness about the *Protection of Children from Sexual Offences (POCSO) Act, 2012*. Our mission is to empower children, parents, and educators with the knowledge and tools to ensure a safer environment for every child. We believe that awareness is the first and most crucial step towards prevention.</p>
+        </section>
+
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/_VBfXOoO924?autoplay=0&rel=0" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                title="Shield 360 Awareness Video">
+            </iframe>
+        </div>
+
+        <h3 id="how-educators-can-help" style="margin-top: 40px;">How Educators Can Help</h3>
+        <div class="content-boxes">
+            <div class="info-box">
+                <strong>1. Educators and Informers</strong>
+                <p>Teach students about good touch and bad touch in an age-appropriate way. Spread awareness about children’s rights and protections under the POCSO Act. Educate children on how to say NO and whom to approach if they feel unsafe.</p>
+            </div>
+            <div class="info-box">
+                <strong>2. Observers and Identifiers</strong>
+                <p>Be alert to behavioral or physical changes in children that may signal abuse. Identify and respond to signs of trauma, fear, or withdrawal. Notice unusual interactions between children and adults or peers.</p>
+            </div>
+            <div class="info-box">
+                <strong>3. Supporters and Caregivers</strong>
+                <p>Create a safe and trusting classroom environment so children feel comfortable sharing. Provide emotional support to children who disclose sensitive issues. Avoid blaming or shaming the child and instead reassure them.</p>
+            </div>
+            <div class="info-box">
+                <strong>4. Mandatory Reporters</strong>
+                <p>Teachers are legally bound to report any suspicion or knowledge of sexual offences against children under the POCSO Act. Ensure proper documentation and immediately inform the school authorities, Child Welfare Committee, or police.</p>
+            </div>
+            <div class="info-box">
+                <strong>5. Collaborators with Parents and Community</strong>
+                <p>Conduct awareness sessions for parents about POCSO and child safety. Work with NGOs, child protection cells, and local authorities for awareness programs. Encourage community vigilance for child safety outside school.</p>
+            </div>
+            <div class="info-box">
+                <strong>6. Role Models</strong>
+                <p>Demonstrate respectful and safe behavior toward children. Set boundaries in teacher–student interactions, showing children what is acceptable. Promote a zero-tolerance policy for abuse, bullying, or harassment in school.</p>
+            </div>
+        </div>
+
+        <section class="core-pillars">
+            <h3>Our Core Pillars</h3>
+            <div class="pillar-grid">
+                <div class="pillar-item">
+                    <strong>Awareness & Education:</strong>
+                    <p>Providing workshops and resources on POCSO Act provisions, child safety, and recognizing signs of abuse.</p>
+                </div>
+                <div class="pillar-item">
+                    <strong>Empowerment:</strong>
+                    <p>Teaching children about their rights and how to seek help from trusted adults or official channels.</p>
+                </div>
+                <div class="pillar-item">
+                    <strong>Safe Spaces:</strong>
+                    <p>Encouraging the creation of a supportive and open dialogue within families, schools, and communities.</p>
+                </div>
+                <div class="pillar-item">
+                    <strong>Reporting & Support:</strong>
+                    <p>Guiding individuals on the correct procedures for reporting incidents and offering support to survivors.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-involved-section" class="get-involved">
+            <h3>How You Can Help</h3>
+            <p style="font-size: 1.1em; max-width: 600px; margin: 0 auto 20px auto;">Protecting children is a collective responsibility. Join us in making a difference:</p>
+            <ul>
+                <li>Attending our awareness sessions.</li>
+                <li>Sharing our resources with your friends and family.</li>
+                <li>Learning more about the POCSO Act and its importance.</li>
+                <li>Being a vigilant and trustworthy adult for the children in your life.</li>
+            </ul>
+            <a href="#" class="cta-primary">Contact Us to Collaborate</a>
+        </section>
+    </main>
+
+    <footer>
+        <a href="teachers-survey.html" class="survey-button">Take Survey</a>
+        <p>&copy; 2025 Shield 360. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // This script is currently empty, but can be used for future interactivity.
+        // For example, smooth scrolling for anchor links:
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

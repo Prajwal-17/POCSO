@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raise Voices. Raise Awareness - Shield360</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* Navbar */
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo { font-size: 22px; font-weight: bold; color: #e63946; }
+    nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+    nav ul li a.active { color: #e63946; border-bottom: 2px solid #e63946; padding-bottom: 3px; }
+
+    /* Hero Banner */
+    .hero {
+      position: relative;
+      background: url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 40px;
+      z-index: 1;
+      text-align: center;
+    }
+
+    /* Article Content */
+    .article-container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .article-container h2 {
+      margin-top: 30px;
+      color: #e63946;
+    }
+    .highlight {
+      background: #fff3f3;
+      border-left: 5px solid #e63946;
+      padding: 12px 18px;
+      margin: 20px 0;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    .quote {
+      font-size: 20px;
+      font-weight: 600;
+      color: #555;
+      margin: 30px 0;
+      border-left: 4px solid #e63946;
+      padding-left: 15px;
+    }
+    .article-container img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 25px 0;
+    }
+
+    /* Social Share */
+    .share-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .share-section h3 { margin-bottom: 15px; }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 12px;
+      font-size: 22px;
+      color: #e63946;
+      transition: transform 0.3s ease;
+    }
+    .social-icons a:hover { transform: scale(1.2); }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Shield360</div>
+    <ul id="menu">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="login.html" class="btn-donate">LOGIN</a>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Raise Voices. Raise Awareness</h1>
+  </section>
+
+  <!-- Article -->
+  <section class="article-container">
+    <p>Children are the future of our nation, yet millions suffer in silence due to abuse, neglect, and exploitation. Awareness is the first step toward building a safe and supportive environment for every child.</p>
+
+    <div class="highlight">
+      Did you know? Every <strong>8 minutes</strong>, a child in India faces abuse. Most cases go unreported because children feel unheard.
+    </div>
+
+    <h2>Why Awareness Matters</h2>
+    <p>Creating awareness ensures that communities can identify, prevent, and report abuse at the earliest stages. By speaking up, we empower children and protect them from harm.</p>
+    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1000&q=80" alt="Child awareness campaign">
+
+    <h2>How You Can Help</h2>
+    <ul>
+      <li>Teach children about safe and unsafe touch.</li>
+      <li>Encourage open conversations at home and in schools.</li>
+      <li>Report suspicious activity immediately to <strong>Childline 1098</strong>.</li>
+      <li>Share campaigns and awareness programs in your community.</li>
+    </ul>
+
+    <div class="quote">
+      "Silence protects the abuser, not the child. Raising your voice can save a life."
+    </div>
+
+    <h2>Shield360’s Role</h2>
+    <p>At Shield360, we run awareness drives in schools, empower parents with resources, and provide training sessions for teachers. Our mission is simple — no child should ever feel unsafe or alone.</p>
+
+    <!-- Social Share -->
+    <div class="share-section">
+      <h3>Share this article</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shield360. All rights reserved.</p>
+    <div>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms & Conditions</a> | 
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </footer>
+
+</body>
+</html>

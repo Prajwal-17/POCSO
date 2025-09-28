@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>POCSO Awareness Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset + Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* Utilities */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .text-center { text-align: center; }
+    .text-light { color: #fff; }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('discover.jpeg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #9ee6f9;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: #6cd9f7;
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+    }
+
+    /* Modules Section */
+    .modules {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .module-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      flex: 1 1 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .module-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .module-card h3 {
+      margin-top: 10px;
+      color: #0077cc;
+    }
+
+    .module-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .feature-box h4 {
+      color: #59d4fa;
+      margin-bottom: 10px;
+    }
+
+    .feature-box p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* Stats Section */
+    .stats {
+      background: #0077cc;
+      color: white;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .stat {
+      flex: 1 1 200px;
+      margin: 10px 20px;
+    }
+
+    .stat h3 {
+      font-size: 2.5rem;
+      color: #ffe600;
+    }
+
+    .stat p {
+      font-size: 1rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .section-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>"Learn. Share. Protect"</h1>
+      <p>Discover our interactive POCSO awareness platform that educates, protects, and supports children, parents, and teachers with real-time tools and safety features.</p>
+    </div>
+  </section>
+
+  <!-- Modules -->
+  <section class="container">
+    <h2 class="section-title">Awareness Modules</h2>
+    <div class="modules">
+      <div class="module-card">
+        <img src="https://img.icons8.com/fluency/48/teacher.png" alt="Teachers"/>
+        <h3>For Teachers</h3>
+        <p>Learn POCSO basics, child protection protocols, and contribute through interactive surveys.</p>
+      </div>
+      <div class="module-card">
+        <img src="https://img.icons8.com/fluency/48/family.png" alt="Parents"/>
+        <h3>For Parents</h3>
+        <p>Understand how to protect your child, spot red flags, and access help instantly via the dashboard.</p>
+      </div>
+      <div class="module-card">
+        <img src="https://img.icons8.com/fluency/48/children.png" alt="Children"/>
+        <h3>For Children</h3>
+        <p>Fun learning through animations, touch-safe quizzes, and storytelling. Safe, engaging, and friendly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="container">
+    <h2 class="section-title">Core Features</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h4>Child-Friendly Reporting</h4>
+        <p>Yes/No quizzes and audio chatbot allow children to report safely without fear.</p>
+      </div>
+      <div class="feature-box">
+        <h4>Smartwatch SOS</h4>
+        <p>Wearable device with emergency SOS button. Sends instant location to parents and authorities.</p>
+      </div>
+      <div class="feature-box">
+        <h4>Real-Time Dashboard</h4>
+        <p>Live updates and monitoring for parents and teachers through connected digital portals.</p>
+      </div>
+      <div class="feature-box">
+        <h4>AI-Powered Chatbot</h4>
+        <p>Supports children emotionally and guides them through reporting or safety processes in multiple languages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="stat">
+      <h3>150,000+</h3>
+      <p>Children Reached</p>
+    </div>
+    <div class="stat">
+      <h3>9,000+</h3>
+      <p>Reports Resolved</p>
+    </div>
+    <div class="stat">
+      <h3>24/7</h3>
+      <p>Live Safety Monitoring</p>
+    </div>
+    <div class="stat">
+      <h3>10+</h3>
+      <p>Languages Supported</p>
+    </div>
+  </section>
+
+</body>
+</html>
