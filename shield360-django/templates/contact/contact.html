@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Shield360</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f77f00, #fcbf49);
+      color: #333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Navigation */
+    nav {
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      border-bottom: 2px solid #9f4800;
+      box-shadow: 0 4px 12px rgb(159 72 0 / 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      font-family: 'Poppins', sans-serif;
+    }
+    nav .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #9f4800;
+      user-select: none;
+      letter-spacing: 1.5px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      font-weight: 600;
+      font-size: 16px;
+      color: #5a3e00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      padding-bottom: 4px;
+      border-bottom: 3px solid transparent;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: #fcbf49;
+      border-bottom-color: #fcbf49;
+    }
+    .btn-donate {
+      background: #9f4800;
+      color: #fcbf49;
+      font-weight: 700;
+      padding: 10px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgb(159 72 0 / 0.5);
+      user-select: none;
+      transition: background 0.3s ease;
+    }
+    .btn-donate:hover {
+      background: #cc6200;
+      box-shadow: 0 8px 28px rgb(204 98 0 / 0.7);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 24px;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgb(0 0 0 / 0.6);
+      font-family: 'Poppins', sans-serif;
+      user-select: none;
+    }
+    .hero h1 {
+      font-size: 3.4rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 650px;
+      margin: auto;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 36px;
+      padding: 60px 30px 100px;
+      max-width: 1120px;
+      margin: auto;
+    }
+    .contact-card {
+      flex: 1 1 350px;
+      max-width: 450px;
+      background: #fff8f0;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgb(159 72 0 / 0.15);
+      padding: 28px 35px;
+      transition: transform 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 12px 42px rgb(159 72 0 / 0.3);
+    }
+    .contact-card h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #9f4800;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    .contact-card p {
+      font-size: 16px;
+      color: #593300;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    /* Highlight Box */
+    .highlight {
+      background: #fff3e0;
+      border-left: 6px solid #fcbf49;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 16px;
+      color: #805200;
+      margin: 20px 0 0;
+      font-weight: 600;
+      user-select: none;
+      box-shadow: 2px 2px 14px rgb(252 191 73 / 0.15);
+    }
+
+    /* Support Centers */
+    .support-item {
+      display: flex;
+      align-items: center;
+      background: #fff3df;
+      border-radius: 14px;
+      padding: 12px 15px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 15px rgb(252 191 73 / 0.3);
+      transition: background 0.3s ease;
+    }
+    .support-item:hover {
+      background: #fcd98f;
+    }
+    .support-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 14px;
+      object-fit: cover;
+      margin-right: 18px;
+      box-shadow: 0 4px 12px rgb(159 72 0 / 0.3);
+      user-select: none;
+      pointer-events: none;
+    }
+    .support-item div {
+      font-size: 16px;
+      color: #704b00;
+      font-weight: 600;
+      line-height: 1.3;
+      user-select: text;
+    }
+
+    /* Footer */
+    footer {
+      background: #9f4800;
+      color: #fff2db;
+      padding: 40px 20px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      user-select: none;
+    }
+    footer a {
+      color: #fff2db;
+      font-weight: 600;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: text-decoration 0.3s ease;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #ffe199;
+      cursor: pointer;
+    }
+
+    /* Social Icons */
+    .social-icons {
+      margin-top: 25px;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 12px;
+      font-size: 24px;
+      color: #fff2db;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #fcbf49;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact-container {
+        padding: 50px 20px 80px;
+      }
+      nav {
+        padding: 16px 20px;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+        max-width: 90%;
+      }
+      nav ul {
+        gap: 18px;
+      }
+    }
+    @media (max-width: 500px) {
+      nav ul {
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+      }
+      .contact-container {
+        flex-direction: column;
+        padding: 40px 15px 60px;
+      }
+      .contact-card {
+        max-width: 100%;
+        margin: auto;
+      }
+      nav .btn-donate {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Shield360</div>
+    <ul id="menu">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="/contact" class="active">Contact</a></li>
+    </ul>
+    <a href="login.html" class="btn-donate">LOGIN</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>We’re Here for Every Child</h1>
+    <p>Reach out for help, guidance, and support. Together, we can create a safe and [translate]Atmanirbhar[/translate] future for every child.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-container">
+
+    <!-- Helpline Card -->
+    <div class="contact-card">
+      <h2>Child Helplines</h2>
+      <div class="highlight">
+        <p><i class="fas fa-phone-alt"></i> <strong>Childline India:</strong><br> <a href="tel:1098">1098 (24x7)</a></p>
+      </div>
+      <div class="highlight">
+        <p><i class="fas fa-phone-alt"></i> <strong>NCPCR:</strong><br> <a href="tel:18001212840">1800-121-2840</a></p>
+      </div>
+      <div class="highlight">
+        <p><i class="fas fa-phone-alt"></i> <strong>Women Helpline:</strong><br> <a href="tel:181">181</a></p>
+      </div>
+      <p><em>Every call is free, confidential, and life-changing.</em></p>
+    </div>
+
+    <!-- Support Centers Card -->
+    <div class="contact-card">
+      <h2>Support Centers</h2>
+      <div class="support-item">
+        <img src="delhi.jpg" alt="Delhi Center" loading="lazy" />
+        <div>
+          <strong>Delhi Child Welfare Committee</strong><br>
+          Safdarjung Enclave, New Delhi
+        </div>
+      </div>
+      <div class="support-item">
+        <img src="mumbai.jpg" alt="Mumbai Center" loading="lazy" />
+        <div>
+          <strong>Mumbai Child Protection Unit</strong><br>
+          Bandra East, Mumbai
+        </div>
+      </div>
+      <div class="support-item">
+        <img src="ban.jpg" alt="Bangalore Center" loading="lazy" />
+        <div>
+          <strong>Bangalore Juvenile Care Center</strong><br>
+          Indiranagar, Bangalore
+        </div>
+      </div>
+      <div class="highlight">
+        <p><i class="fas fa-lightbulb"></i> <strong>Atmanirbhar Message:</strong><br>  
+        Empowering children with awareness and courage ensures a safer tomorrow.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shield360. All rights reserved.</p>
+    <div>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms & Conditions</a> | 
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="social-icons" role="list">
+      <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter" role="listitem"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="LinkedIn" role="listitem"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
